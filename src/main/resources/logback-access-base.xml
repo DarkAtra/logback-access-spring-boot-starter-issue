@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<included>
+    <springProperty scope="context" name="consoleEnabled" source="accesslog.console.enabled"/>
+
+    <if condition='${consoleEnabled}'>
+        <then>
+            <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+                <encoder>
+                    <pattern>common</pattern>
+                </encoder>
+            </appender>
+            <appender-ref ref="console"/>
+        </then>
+    </if>
+</included>

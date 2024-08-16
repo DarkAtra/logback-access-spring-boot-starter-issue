@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: logback-access-spring-boot-starter-issue
+
+accesslog:
+  console:
+    enabled: true
