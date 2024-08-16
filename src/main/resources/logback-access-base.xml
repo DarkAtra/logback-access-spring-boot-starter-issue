@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <included>
+    <!-- is set to true in application.yml -->
     <springProperty scope="context" name="consoleEnabled" source="accesslog.console.enabled"/>
 
+    <!-- this should evaluate to true and thus add the ConsoleAppender -->
     <if condition='${consoleEnabled}'>
         <then>
             <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
